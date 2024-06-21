@@ -1,0 +1,249 @@
+<style>
+
+  .slider-section {
+    position: relative;
+    width: 100%;
+    height: {{ section.settings.banner_width }};
+
+  }
+  .slick-slide {
+    margin: 0 20px;
+  }
+
+  .slick-slide img {
+    width: 100%;
+    height: {{ section.settings.banner_width }};
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+
+
+  .slick-slide {
+    transition: all ease-in-out 0.3s;
+    opacity: .2;
+  }
+
+  .slick-active {
+    opacity: .5;
+  }
+
+  .slick-current {
+    opacity: 1;
+  }
+  .arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
+  .arrow span {
+    display: block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border-bottom: 5px solid white;
+    border-right: 5px solid white;
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: animate 2s infinite;
+  }
+
+  .arrow span:nth-child(2) {
+    animation-delay: -0.2s;
+  }
+
+  .arrow span:nth-child(3) {
+    animation-delay: -0.4s;
+  }
+  .slick-dots li {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  .slick-dots li button {
+    font-size: 0;
+    line-height: 0;
+    display: block;
+    width: 15px;
+    height: 20px;
+    cursor: pointer;
+    color: transparent;
+    border: 0;
+    outline: none;
+    background: transparent;
+  }
+
+
+  .slick-prev {
+    left: {{ section.settings.arrow_prev }};
+    z-index: 999;
+  }
+  .slick-next {
+    right: {{ section.settings.arrow_next }};
+    z-index: 99;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 30px;
+  }
+  .btn {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .banner_text {
+    position: absolute;
+    top: {{ section.settings.banner_text_top }};
+    left: {{ section.settings.banner_text_left }};
+    transform: translate(-50%, -50%);
+  }
+
+</style>
+
+
+<section class="slider-section">
+  <div class="vertical-center slider">
+    {% for block in section.blocks %}
+      <div>
+        <img src="{{block.settings.image |  image_url }}">
+      </div>
+    {% endfor %}
+
+
+  </div>
+  <div class="banner_text">
+    <p>{{ section.settings.banner_text }}</p>
+  </div>
+  <div class="btn">
+    <div class="banner__buttons{% if section.settings.button_label_1 != blank and section.settings.button_label_2 != blank %} banner__buttons--multiple{% endif %}" {{ section.shopify_attributes }}>
+      {%- if section.settings.button_label_1 != blank -%}
+        <a
+          {% if section.settings.button_link_1 == blank %}
+          role="link"
+          aria-disabled="true"
+          {% else %}
+          href="{{ section.settings.button_link_1 }}"
+          {% endif %}
+          class="color-{{ section.settings.color_scheme1 }} button{% if section.settings.button_style_secondary_1 %}  button--secondary{% else %} button--primary{% endif %}">
+          {{- section.settings.button_label_1 | escape -}}
+        </a>
+      {%- endif -%}
+      {%- if section.settings.button_label_2 != blank -%}
+        <a
+          {% if section.settings.button_link_2 == blank %}
+          role="link"
+          aria-disabled="true"
+          {% else %}
+          href="{{ section.settings.button_link_2 }}"
+          {% endif %}
+          class="color-{{ section.settings.color_scheme2 }} button{% if section.settings.button_style_secondary_2 %}  button--secondary{% else %} button--primary{% endif %}">
+          {{- section.settings.button_label_2 | escape -}}
+        </a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "slick_slider",
+    "settings": [
+      {
+        "type": "richtext",
+        "id": "banner_text",
+        "label": "Banner Text"
+      },
+      {
+        "type": "text",
+        "id": "banner_text_top",
+        "label": "Text Postition From Top",
+        "default": "10%"
+      },
+      {
+        "type": "text",
+        "id": "banner_text_left",
+        "label": "Text Postion From Left",
+        "default": "50%"
+      },
+      {
+        "type": "text",
+        "id": "arrow_prev",
+        "label": "Left Arrow Position",
+        "default": "25px"
+      }, {
+        "type": "text",
+        "id": "arrow_next",
+        "label": "Right Arrow Position",
+        "default": "25px"
+      }, {
+        "type": "text",
+        "id": "banner_width",
+        "label": "Banner Width",
+        "default": "500px"
+      }, {
+        "type": "color_scheme",
+        "id": "color_scheme1",
+        "label": "Button 1 Color Scheme"
+      }, {
+        "type": "color_scheme",
+        "id": "color_scheme2",
+        "label": "Button 2 Color Scheme"
+      }, {
+        "type": "text",
+        "id": "button_label_1",
+        "default": "Button label",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_label_1.label",
+        "info": "t:sections.image-banner.blocks.buttons.settings.button_label_1.info"
+      }, {
+        "type": "url",
+        "id": "button_link_1",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_link_1.label"
+      }, {
+        "type": "checkbox",
+        "id": "button_style_secondary_1",
+        "default": false,
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_1.label"
+      }, {
+        "type": "text",
+        "id": "button_label_2",
+        "default": "Button label",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_label_2.label",
+        "info": "t:sections.image-banner.blocks.buttons.settings.button_label_2.info"
+      }, {
+        "type": "url",
+        "id": "button_link_2",
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_link_2.label"
+      }, {
+        "type": "checkbox",
+        "id": "button_style_secondary_2",
+        "default": false,
+        "label": "t:sections.image-banner.blocks.buttons.settings.button_style_secondary_2.label"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "slides",
+        "type": "text",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "select image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "slick_slider"
+      }
+    ]
+  }
+{% endschema %}

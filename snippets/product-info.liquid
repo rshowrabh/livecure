@@ -1,0 +1,41 @@
+<div class="product-metadescriptions">
+  {% for item in product_info %}
+    <div class="metadescriptions-item">
+      {% if item.video != blank %}
+        <div class="metadescriptions-media product-description-video">
+          <video
+            style="max-width: 100%; height: auto;"
+            playsinline=""
+            muted=""
+            loop="loop"
+            autoplay="autoplay"
+            data-mce-style="max-width: 100%; height: auto;">
+            <source type="video/mp4" src="{{ item.video | file_url }}">
+          </video>
+        </div>
+      {% else %}
+        {% if item.image != blank %}
+          <div class="metadescriptions-media product-description-image fill">
+            <img
+              src="{{ item.image | img_url: 'master'}}"
+              class="product-description-img"
+              alt="img">
+          </div>
+        {% endif %}
+      {% endif %}
+      <div class="metadescriptions-content {% if item.video == blank and item.image == blank %} full-width{% endif %}">
+        {% if item.heading != blank %}
+          <h2 class="product-description-title">
+            {{ item.heading | metafield_tag }}
+          </h2>
+        {% endif %}
+
+        {% if item.content != blank %}
+          <div class="product-description-text">
+            {{ item.content | metafield_tag }}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,357 @@
+{
+  "sections": {
+    "image_banner_slider_bVzNNf": {
+      "type": "image-banner-slider",
+      "blocks": {
+        "slides_cJRdbU": {
+          "type": "slides",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/website-banner-6.webp",
+            "content_position": "center-bottom",
+            "content_alignment": "left",
+            "opacity": 10,
+            "heading": "",
+            "sub_heading": "",
+            "text": "",
+            "btn_label": "Shop now",
+            "url": "shopify:\/\/collections\/no-title",
+            "second_label": "Learn More",
+            "second_url": "shopify:\/\/collections\/under-100",
+            "enable_link": true,
+            "color_scheme": "scheme-3"
+          }
+        },
+        "slides_VcGAaU": {
+          "type": "slides",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/564501ac-6cad-425b-bc40-1629261c4197.jpg",
+            "content_position": "center-bottom",
+            "content_alignment": "left",
+            "opacity": 10,
+            "heading": "",
+            "sub_heading": "",
+            "text": "",
+            "btn_label": "Shop now",
+            "url": "shopify:\/\/collections\/no-title",
+            "second_label": "Learn More",
+            "second_url": "shopify:\/\/collections\/under-100",
+            "enable_link": true,
+            "color_scheme": "scheme-3"
+          }
+        },
+        "slides_cG4hYE": {
+          "type": "slides",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/cc405f61-996a-4861-bf46-c2e251129636_1.jpg",
+            "content_position": "center-bottom",
+            "content_alignment": "left",
+            "opacity": 10,
+            "heading": "",
+            "sub_heading": "",
+            "text": "",
+            "btn_label": "Shop now",
+            "url": "shopify:\/\/collections\/no-title",
+            "second_label": "Learn More",
+            "second_url": "shopify:\/\/collections\/under-100",
+            "enable_link": true,
+            "color_scheme": "scheme-3"
+          }
+        },
+        "slides_Jgp4GC": {
+          "type": "slides",
+          "settings": {
+            "bg_image": "shopify:\/\/shop_images\/website-banner-5.jpg",
+            "content_position": "center-bottom",
+            "content_alignment": "left",
+            "opacity": 10,
+            "heading": "",
+            "sub_heading": "",
+            "text": "",
+            "btn_label": "Shop now",
+            "url": "shopify:\/\/collections\/no-title",
+            "second_label": "Learn More",
+            "second_url": "shopify:\/\/collections\/under-100",
+            "enable_link": true,
+            "color_scheme": "scheme-3"
+          }
+        }
+      },
+      "block_order": [
+        "slides_cJRdbU",
+        "slides_VcGAaU",
+        "slides_cG4hYE",
+        "slides_Jgp4GC"
+      ],
+      "settings": {
+        "slider_height": "default",
+        "center_width": false
+      }
+    },
+    "card_collection_new_kXEbfm": {
+      "type": "card-collection-new",
+      "blocks": {
+        "featured_collection_wLtgQY": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "ro-waterpurifiers"
+          }
+        },
+        "featured_collection_bpRy7Y": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "alkaline"
+          }
+        },
+        "featured_collection_YNGFCq": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "uv-uf"
+          }
+        },
+        "featured_collection_heP7mV": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "hot-cold-waterpurifiers"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_wLtgQY",
+        "featured_collection_bpRy7Y",
+        "featured_collection_YNGFCq",
+        "featured_collection_heP7mV"
+      ],
+      "settings": {
+        "title": "Shop By Category",
+        "heading_size": "h2",
+        "image_ratio": "square",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-4028a502-b5f4-4539-b7b3-9ff88ca0a3a2",
+        "show_view_all": true,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_VdMBJm": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Latest Arrivals",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "latest-arrivals",
+        "products_to_show": 8,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-4028a502-b5f4-4539-b7b3-9ff88ca0a3a2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 48
+      }
+    },
+    "discount_banner_wifz7x": {
+      "type": "discount-banner",
+      "settings": {
+        "height": "450px",
+        "image": "shopify:\/\/shop_images\/sale_slider_livpure2.jpg",
+        "discount_price": "30%",
+        "banner_heading": "Limited Time, Unbeatable Savings",
+        "banner_text": "<p>Hurry and take advantage of our limited-time, unbeatable savings event<\/p>",
+        "is_sale": true,
+        "color_scheme": "scheme-d57fc4a4-7faf-45ea-8916-71f60e65a193"
+      }
+    },
+    "multicolumnbutton_WNkHLx": {
+      "type": "multicolumnbutton",
+      "blocks": {
+        "column_nP89zT": {
+          "type": "column",
+          "settings": {
+            "icon": "box",
+            "title": "Free Shipping",
+            "text": "<p>Enjoy free Shipping when shop more! All orders over BDT 5000 are delivered to dropstep at no extra charge.<\/p>",
+            "link_label": "Shipping Details",
+            "link": ""
+          }
+        },
+        "column_BLEzph": {
+          "type": "column",
+          "settings": {
+            "icon": "return",
+            "title": "07-Days Free Returns",
+            "text": "<p>Enjoy the freedom of stress-free shopping with our hassle-free and complimentary return policy.<\/p>",
+            "link_label": "Return Policy",
+            "link": ""
+          }
+        },
+        "column_WeNm34": {
+          "type": "column",
+          "settings": {
+            "icon": "lock",
+            "title": "Secure Payment",
+            "text": "<p>Shop with confidence knowing your payment are secure and your information is safeguarded<\/p>",
+            "link_label": "More About Payment",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_nP89zT",
+        "column_BLEzph",
+        "column_WeNm34"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "shopify:\/\/products\/basic-high-neck-sweater-1",
+        "color_scheme": "scheme-5",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumnimagebutton_yPJNxQ": {
+      "type": "multicolumnimagebutton",
+      "blocks": {
+        "column_YVEWnN": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woodash_media_1.webp",
+            "title": "Be the First to Introduce Exquisite Decor Collection",
+            "text": "New Arrival",
+            "link_label": "Shop Now",
+            "link": "",
+            "link_label2": "Learn More",
+            "link2": ""
+          }
+        },
+        "column_83wUqD": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/woodash_media_2.webp",
+            "title": "Be the First to Introduce Exquisite Decor Collection",
+            "text": "New Arrival",
+            "link_label": "Shop Later",
+            "link": "",
+            "link_label2": "Learn More",
+            "link2": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_YVEWnN",
+        "column_83wUqD"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 2,
+        "column_alignment": "left",
+        "background_style": "primary",
+        "button_label": "Button label",
+        "button_link": "",
+        "color_scheme": "scheme-4028a502-b5f4-4539-b7b3-9ff88ca0a3a2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 80,
+        "padding_bottom": 20
+      }
+    },
+    "featured_collection_FT7pVA": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "All About Lighting",
+        "heading_size": "h2",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "ro-waterpurifiers",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": true,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "scheme-4028a502-b5f4-4539-b7b3-9ff88ca0a3a2",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "show_rating": false,
+        "quick_add": "none",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "review_VxqCQV": {
+      "type": "review",
+      "blocks": {
+        "column_DN76WT": {
+          "type": "column",
+          "settings": {
+            "star": "5",
+            "text": "I want to mention the delivery service, which was prompt and efficient. The delivery team assembled all the pieces expertly, leaving no mess behind, which was a huge relief.",
+            "avatar": "shopify:\/\/shop_images\/profile3.jpg",
+            "reviwer": "Showrabh Rahman",
+            "image": "shopify:\/\/shop_images\/03_hero_interior.jpg"
+          }
+        },
+        "column_WLCFEW": {
+          "type": "column",
+          "settings": {
+            "star": "4",
+            "text": "H want to mention the delivery service, which was prompt and efficient. The delivery team assembled all the pieces expertly, leaving no mess behind, which was a huge relief.",
+            "reviwer": "Farukh Hasan",
+            "image": "shopify:\/\/shop_images\/01_hero_interior_new.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "column_DN76WT",
+        "column_WLCFEW"
+      ],
+      "settings": {
+        "height": "500px",
+        "color_scheme": "scheme-d57fc4a4-7faf-45ea-8916-71f60e65a193",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "heading": "We Appreciate Your Feedback and Always Listen to Your Opinion",
+        "subheading": "4.5 Out of 5 Stars from Over 325 Reviews"
+      }
+    }
+  },
+  "order": [
+    "image_banner_slider_bVzNNf",
+    "card_collection_new_kXEbfm",
+    "featured_collection_VdMBJm",
+    "discount_banner_wifz7x",
+    "multicolumnbutton_WNkHLx",
+    "multicolumnimagebutton_yPJNxQ",
+    "featured_collection_FT7pVA",
+    "review_VxqCQV"
+  ]
+}

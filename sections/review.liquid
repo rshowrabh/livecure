@@ -1,0 +1,163 @@
+{{ 'component-review.css' | asset_url | stylesheet_tag }}
+
+
+{%- style -%}
+  .review {
+    height: {{ section.settings.height }}
+  }
+  .review .r_section img {
+    height: {{ section.settings.height }}
+  }
+  .section-{{ section.id }}
+  -padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px * 0.75);
+  }
+
+  @media only screen and (max-width: 767px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+<div class="gradient page-width">
+  <div class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding review">
+    <div class="l_section">
+      <div class="lt_section">
+        <p>Reviews
+        </p>
+        <h2>{{ section.settings.heading | escape }}</h2>
+        <p>{{ section.settings.subheading | escape }}</p>
+      </div>
+      <div class="lb_section">
+        <div class="slider-for">
+          {% for block in section.blocks %}
+            <div>
+              <div style="display: flex;">
+                <div class="avatar">
+                  {% if block.settings.avatar != null %}
+                    <img src="{{block.settings.avatar |  image_url }}" alt="">
+                  {% else %}
+                    <img src="{{ 'avatar.png' |  asset_url }}" alt="">
+                  {% endif %}
+                </div>
+                <div class="star_icon">
+                  <p style="font-weight: 700;">{{ block.settings.reviwer }}</p>
+                  {% for i in (1..block.settings.star) %}
+                    {%- render 'StarFilledIcon' -%}
+                  {% endfor %}
+                </div>
+              </div>
+              <p class="text">{{ block.settings.text | escape }}</p>
+            </div>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+    <div class="r_section">
+      <div class="slider-nav fill">
+        {% for block in section.blocks %}
+          <img src="{{block.settings.image |  image_url }}" alt="">
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Review Section",
+    "tag": "section",
+    "class": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "height",
+        "label": "Section Height",
+        "default": "500px"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "scheme-1"
+      },
+      {
+        "type": "header",
+        "content": "t:sections.all.padding.section_padding_heading"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_top",
+        "default": 40
+      }, {
+        "type": "range",
+        "id": "padding_bottom",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "t:sections.all.padding.padding_bottom",
+        "default": 52
+      }, {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "We Appreciate Your Feedback and Always Listen to Your Opinion"
+      }, {
+        "type": "text",
+        "id": "subheading",
+        "label": "Sub Heading",
+        "default": "4.5 Out of 5 Stars from Over 325 Reviews "
+      }
+    ],
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Add blocks",
+        "settings": [
+          {
+            "type": "text",
+            "id": "star",
+            "label": "How Many Star",
+            "default": "5"
+          },
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Text Here",
+            "default": "I want to mention the delivery service, which was prompt and efficient. The delivery team assembled all the pieces expertly, leaving no mess behind, which was a huge relief."
+          },
+          {
+            "type": "image_picker",
+            "id": "avatar",
+            "label": "Enter Avatar"
+          },
+          {
+            "type": "text",
+            "id": "reviwer",
+            "label": "Enter Reviwer",
+            "default": "Reviewed ByFarukh Hasan"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Pick Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Review Section"
+      }
+    ]
+  }
+{% endschema %}
